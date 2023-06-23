@@ -1,44 +1,42 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
 </head>
-
-
 <body>
     <div class="container">
         <div class="calculadora">
             <div class="display">
-                <div id="valor-anterior"></div>
-                <div id="valor-actual"></div>
-                <div class="resultado"></div>
+                <input id="valoractual" readonly ></input>
             </div>
-            <button class="borrar">C</button>
-            <button class="operadorDivision" value="dividir">%</button>
-            <button class="numero7">7</button>
-            <button class="numero8">8</button>
-            <button class="numero9">9</button>
-            <button class="operadorMultiplicacion" value="multiplicar">X</button>
-            <button class="numero4">4</button>
-            <button class="numero5">5</button>
-            <button class="numero6">6</button>
-            <button class="operadorResta" value="restar">-</button>
-            <button class="">1</button>
-            <button class="numero2">2</button>
-            <button class="numero3">3</button>
-            <button class="operadorSuma" value="sumar">+</button>
-            <button class="numero0">0</button>
-            <button class="numerodecimal">.</button>
-            <button class="operadorIgual" value="igual">=</button>
+            <div class="botones">
+
+                <button class="numero" onclick="concatenarNum('7')">7</button>
+                <button class="numero" onclick="concatenarNum('8')">8</button>
+                <button class="numero" onclick="concatenarNum('9')">9</button>
+                <button class="numero operador" value="dividir" onclick="concatenarNum('/')">&#247</button>
+                <button class="numero" onclick="concatenarNum('4')">4</button>
+                <button class="numero" onclick="concatenarNum('5')">5</button>
+                <button class="numero" onclick="concatenarNum('6')">6</button>
+                <button class="numero operador" value="multiplicar" onclick="concatenarNum('*')">x</button>
+                <button class="numero" onclick="concatenarNum('1')">1</button>
+                <button class="numero" onclick="concatenarNum('2')">2</button>
+                <button class="numero" onclick="concatenarNum('3')">3</button>
+                <button class="numero operador" value="restar" onclick="concatenarNum('-')">-</button>
+                <button class="numero" onclick="concatenarNum('0')">0</button>
+                <button class="numero" onclick="concatenarNum(',')">,</button>
+                <button class="borrar" onclick="borrarNum()">C</button>
+                <button class="numero operador" value="sumar" onclick="concatenarNum('+')">+</button>
+                
+                <div class="igual" value="igual" onclick="calcularOperacion()">=</div>
+            </div>
         </div>
     </div>
+    </div>
 </body>
-
 </html>
